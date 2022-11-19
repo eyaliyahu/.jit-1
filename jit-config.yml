@@ -1,9 +1,0 @@
-aws:
-- account_id: '123456789123'
-  account_name: Eyal
-  deploy_region: us-west-1
-  regions:
-  - us-east-1
-  - us-west-1
-  - us-east-2
-  type: account
