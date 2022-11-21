@@ -7,7 +7,7 @@ on:
           required: true
 jobs:
   secret-detection:
-    if: contains( fromJSON(github.event.inputs.client_payload).payload.control_ids, 'ba097cc5-4f5c-4f6d-997a-9558f4ff2731') || fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'secret-detection'
+    if: contains( fromJSON(github.event.inputs.client_payload).payload.control_ids, '8ff8b60d-88ad-4bff-b3ae-7fcd6546f8a1') || fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'secret-detection'
     runs-on: ubuntu-latest
     steps:
     - name: secrets-detection
