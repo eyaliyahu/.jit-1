@@ -91,10 +91,10 @@ jobs:
         dispatch_type: workflow
 
   secret-detection:
-    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'secret-detection'
+    if: contains( fromJSON(github.event.inputs.client_payload).payload.control_ids, 'e04f25c8-0b69-4569-92c4-6c8ac0da5065') || fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'secret-detection'
     runs-on: ubuntu-latest
     steps:
-    - name: gitleaks
+    - name: secrets-detection
       uses: jitsecurity-controls/jit-github-action@v1.6
       with:
         docker_user: jit-bot
