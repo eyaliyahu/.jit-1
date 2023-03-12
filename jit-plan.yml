@@ -1,6 +1,5 @@
 name: My plan
 level: beginner
-update_id: 8da8a56e-203f-42b7-9419-b4634ab9befc
 author: Jit
 version: 0.1
 owners:
@@ -11,3 +10,6 @@ tags: []
 items:
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
+  - name: Verify that Github Branch Protection is properly configured
+    uses: >-
+      jitsecurity-controls/jit-plans/items/third_party_app/item-branch-protection-scm.yml@latest
